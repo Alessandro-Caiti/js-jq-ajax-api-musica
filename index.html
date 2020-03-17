@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Api musica</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div class="header-container flex">
+                    <img src="img/logo.png" alt="logo">
+                    <select class="genre-selector" name="">
+                        <option value="">Scegli il genere</option>
+                        <option value="pop">Pop</option>
+                        <option value="rock">Rock</option>
+                        <option value="metal">Metal</option>
+                        <option value="jazz">Jazz</option>
+                    </select>
+                </div>
+            </header>
+            <div class="cards-container flex">
+                <!-- <div class="card" data-genre="{{genre}}">
+                    <img src="{{albumImg}}" alt="{{albumName}}">
+                    <h3>{{albumName}}</h3>
+                    <span>{{author}}</span>
+                    <span>{{year}}</span>
+                </div> -->
+            </div>
+        </div>
+
+
+        <script id="card-template" type="text/x-handlebars-template">
+            <div class="card flex" data-genre="{{genre}}">
+                <img src="{{albumImg}}" alt="{{albumName}}">
+                <h3>{{albumName}}</h3>
+                <span>{{author}}</span>
+                <span>{{year}}</span>
+            </div>
+        </script>
+
+        <script src="js/main.js" charset="utf-8"></script>
+    </body>
+</html>
